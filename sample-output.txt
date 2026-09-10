@@ -1,0 +1,18 @@
+Example output. Synthetic data from a fictional workstation — not a real machine.
+
+Endpoint Hardening Audit — WKSTN-4417.corp.local — 2026-03-14 09:22
+
+RESULT CHECK                        DETAIL
+------ ---------------------------- ----------------------------------------
+PASS   Disk encryption              FileVault enabled
+FAIL   Firewall                     application firewall is OFF
+WARN   Screen lock                  password required, but only after 900s
+PASS   Automatic updates            update checks enabled
+WARN   Remote login (SSH)           enabled — confirm this is intended
+FAIL   SSH root login               PermitRootLogin yes — root is directly reachable
+WARN   SSH password auth            passwords accepted — brute-forceable
+WARN   Externally bound services    3 listening on all interfaces: nginx, postgres, sshd
+PASS   Guest account                disabled
+
+Summary: 3 pass · 4 warn · 2 fail · 0 skipped
+Action required: 2 check(s) failed.
